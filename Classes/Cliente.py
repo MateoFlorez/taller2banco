@@ -26,20 +26,16 @@ class Cliente:
     # SETTERS
     @nombre.setter
     def nombre(self,nombre):
-        print('Digita el nombre: ')
-        self.__nombre = input(nombre)
+        self.__nombre = input(f'Digite el nombre: {nombre}')
 
     @apellido.setter
     def apellido(self,apellido):
-        print('Digita el apellido: ')
-        self.__apellido = input(apellido)
+        self.__apellido = input(f'Digite el apellido: {apellido}')
 
     @cedula.setter
     def cedula(self,cedula):
-        print('Digita la cedula: ')
-        self.__cedula = int(input(cedula))
+        self.__cedula = int(input(f'Digite la cedula: {cedula}'))
 
     @ciudad.setter
     def ciudad(self,ciudad):
-        print('Digita la ciudad: ')
-        self.__ciudad = input(ciudad)
+        self.__ciudad = input(f'Digite la ciudad: {ciudad}')
