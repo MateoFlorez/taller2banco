@@ -15,18 +15,18 @@ nuevaOpcion = 1
 print('BANCO DE HIERRO ISLA BRAAVOS')
 print('1. Agregar cliente')
 print('2. Consultar estado de cuenta')
-print('3. Ingresar o Retirar dinero')
+print('3. Ingresar / Retirar dinero')
 print('4. Salir')
 
 while (opcion != 4):
     opcion = int(input('Digita una opción: '))
     if(opcion == 1):
-        cliente.nombre = ''
-        cliente.apellido = ''
-        cliente.cedula = 0
-        cliente.ciudad = ''
-        cuenta.numeroCuenta = 0
-        cuenta.saldo = 0
+        cliente.nombre = input(f'Digite el nombre: ')
+        cliente.apellido = input(f'Digite el apellido: ')
+        cliente.cedula = int(input(f'Digite la cedula: '))
+        cliente.ciudad = input(f'Digite la ciudad: ')
+        cuenta.numeroCuenta = input(f'Digite el numero de cuenta: ')
+        cuenta.saldo = input(f'Digite el saldo: ')
 
         clientes.append({"nombre":cliente.nombre,"apellido":cliente.apellido,"cedula":cliente.cedula,"ciudad":cliente.ciudad})
         cuentas.append({"numeroCuenta":cuenta.numeroCuenta,"saldo":cuenta.saldo})
@@ -59,16 +59,18 @@ while (opcion != 4):
                 print(f'Numero de cuenta: {cuenta.numeroCuenta}')
                 print(f'Saldo: {cuenta.saldo}')
                 ingreso = int(input('Dinero a ingresar: '))
-                saldoCuenta = saldoCuenta + ingreso
-                print(f'Tu nuevo saldo es de: {saldoCuenta}')
+                # saldoCuenta = saldoCuenta + ingreso
+                cuenta.saldo = int(cuenta.saldo) + ingreso
+                print(f'Tu nuevo saldo es de: {cuenta.saldo}')
                 
 
             elif(nuevaOpcion == 2):
                 print(f'Numero de cuenta: {cuenta.numeroCuenta}')
                 print(f'Saldo: {cuenta.saldo}')
                 retiro = int(input('Dinero a retirar: '))
-                saldoCuenta = saldoCuenta - retiro
-                print(f'Tu nuevo saldo es de: {saldoCuenta}')
+                # saldoCuenta = saldoCuenta - retiro
+                cuenta.saldo = int(cuenta.saldo) - retiro
+                print(f'Tu nuevo saldo es de: {cuenta.saldo}')
             
             elif(opcion == 3):
                 print('Saliendo del programa...')

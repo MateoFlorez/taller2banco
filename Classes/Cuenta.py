@@ -16,8 +16,8 @@ class Cuenta:
     # SETTERS
     @numeroCuenta.setter
     def numeroCuenta(self,numeroCuenta):
-        self.__numeroCuenta = input(f'Digite el numero de cuenta: {numeroCuenta}')
+        self.__numeroCuenta = numeroCuenta
 
     @saldo.setter
     def saldo(self,saldo):
-        self.__saldo = input(f'Digite el saldo: {saldo}')
+        self.__saldo = saldo
